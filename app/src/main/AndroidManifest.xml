@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WinterSchool">
         <activity
-            android:name=".list.ListView2Ex"
+            android:name=".bottom_navigation.BtmNaviActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".recyclerview.RecyclerViewEx"
+            android:exported="true" />
+        <activity
+            android:name=".list.ListView2Ex"
+            android:exported="true" />
         <activity
             android:name=".say.SentenceActivity"
             android:exported="false" />
