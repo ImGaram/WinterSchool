@@ -10,18 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WinterSchool">
         <activity
-            android:name=".say.SentenceActivity"
-            android:exported="false" />
-        <activity
-            android:name=".say.WiseSayActivity"
+            android:name=".list.ListView2Ex"
             android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".say.SentenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".say.WiseSayActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

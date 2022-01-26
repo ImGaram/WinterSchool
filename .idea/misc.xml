@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/activity_list_view2_ex.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/activity_sentence.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/activity_wise_say.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/list_item.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/list_item2.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/WinterSchool/app/src/main/res/layout/listview_item.xml" value="0.24947916666666667" />
       </map>
     </option>
