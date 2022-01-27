@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "547998314972",
+    "project_id": "winterschool-66fc0",
+    "storage_bucket": "winterschool-66fc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547998314972:android:68aef46b63d75b66569f19",
+        "android_client_info": {
+          "package_name": "com.example.winterschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547998314972-jlf1s8gbme5sv2auhtfnc6ob6t3s3hve.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.winterschool.fb_login",
+            "certificate_hash": "8bdd7de2f05e51dcae3880596c0d14bceb30debc"
+          }
+        },
+        {
+          "client_id": "547998314972-bv4s5k621d0nk56939s47ek2ja3jk3ab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC81312qxi8TWe3zDH47hTZbEXIBUW2hos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547998314972-bv4s5k621d0nk56939s47ek2ja3jk3ab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
