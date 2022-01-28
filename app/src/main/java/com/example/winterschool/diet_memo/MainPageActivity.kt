@@ -7,18 +7,47 @@ import android.view.LayoutInflater
 import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ListView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.example.winterschool.R
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class MainPageActivity : AppCompatActivity() {
+
+    val dataModelList = mutableListOf<dataModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
+        val database = Firebase.database
+        val myRef = database.getReference("myMemo")
+
+        val listView = findViewById<ListView>(R.id.main_listview)
+        val adapter = ListViewAdapter(dataModelList)
+
+        Log.d("data", dataModelList.toString())
+
+        listView.adapter = adapter
+
+        myRef.child(Firebase.auth.currentUser!!.uid).addValueEventListener(object :ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                dataModelList.clear()
+                for (dataModel in snapshot.children) {
+                    Log.d("data", dataModel.toString())
+                    dataModelList.add(dataModel.getValue(com.example.winterschool.diet_memo.dataModel::class.java)!!)
+                }
+                adapter.notifyDataSetChanged()
+
+            }
+            override fun onCancelled(error: DatabaseError) {  }
+        })
 
         val writeBtn = findViewById<ImageView>(R.id.writeBtn)
         writeBtn.setOnClickListener {
@@ -51,11 +80,12 @@ class MainPageActivity : AppCompatActivity() {
                 val healthMemo = mAlertDialog.findViewById<EditText>(R.id.health_memo)?.text.toString()
 
                 val database = Firebase.database
-                val myRef = database.getReference("myMemo")
+                val myRef = database.getReference("myMemo").child(Firebase.auth.currentUser!!.uid)
 
                 val model = dataModel(dateText, healthMemo)
+                myRef.push().setValue(model)
 
-                myRef.setValue(model)
+                mAlertDialog.dismiss()
             }
         }
     }
