@@ -10,15 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WinterSchool">
         <activity
-            android:name=".fb_login.EmailLoginActivity"
+            android:name=".diet_memo.SplashActivity"
             android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".diet_memo.MainPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fb_login.EmailLoginActivity"
+            android:exported="true" />
         <activity
             android:name=".fb_login.LoginActivity"
             android:exported="true" />
